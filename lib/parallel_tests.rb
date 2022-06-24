@@ -17,7 +17,7 @@ module ParallelTests
       [
         count,
         ENV["PARALLEL_TEST_PROCESSORS"],
-        Parallel.processor_count
+        Parallel.processor_count / 2,
       ].detect { |c| !c.to_s.strip.empty? }.to_i
     end
 
